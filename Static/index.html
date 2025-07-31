@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GAN Interactive Visual</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container text-center py-5">
+    <h1 class="display-4 text-light">Generative Adversarial Network (GAN)</h1>
+
+    <div class="row justify-content-center align-items-center mb-5">
+      <div class="col-4">
+        <div class="card bg-secondary text-white p-4">
+          <h4>Latent Space</h4>
+          <div class="noise-box">
+            <span class="badge bg-info">Input Noise (z)</span>
+            <button id="noiseBtn" class="btn btn-info btn-sm mt-3">Add Noise</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card bg-warning text-dark p-4">
+          <h4>Generator</h4>
+          <div class="network-box" id="generatorNetwork">
+            <span class="badge bg-dark">Network</span>
+          </div>
+          <div class="arrow" id="genArrow"></div>
+          <div class="fake-data" id="fakeData">
+            <span class="badge bg-primary">Fake Data (x)</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card bg-primary text-white p-4">
+          <h4>Discriminator</h4>
+          <div class="network-box" id="discriminatorNetwork">
+            <span class="badge bg-dark">Network</span>
+          </div>
+          <div class="decision-box" id="decisionBox">
+            <div class="row">
+              <div class="col">
+                <span class="badge bg-success">Real</span>
+              </div>
+              <div class="col">
+                <span class="badge bg-danger">Fake</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-6">
+        <div class="card bg-light text-dark p-4">
+          <h4>Real Data (x)</h4>
+          <div class="data-box" id="realData">
+            <span class="badge bg-warning">Data</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <button id="generateBtn" class="btn btn-primary mx-2">Generate</button>
+        <button id="resetBtn" class="btn btn-secondary mx-2">Reset</button>
+      </div>
+    </div>
+
+    <div class="card bg-dark text-white p-4 mt-5">
+      <h4>Log</h4>
+      <ul id="logList" class="list-group"></ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
