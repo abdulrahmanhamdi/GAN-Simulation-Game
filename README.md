@@ -13,6 +13,10 @@ This tool is ideal for instructors, students, and researchers who want to unders
 
 ---
 
+> ![Preview](Preview.png)
+> **Figure 1:** Preview
+---
+
 ## Features
 
 - Dynamic noise injection from latent space (z)
